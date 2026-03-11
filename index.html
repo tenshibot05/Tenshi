@@ -10,28 +10,28 @@
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0c0415;
+font-family:Arial;
+background:#0b0314;
 color:white;
 overflow-x:hidden;
 }
 
-/* FUNDO ANIMADO */
+/* FUNDO */
 
 body::before{
 content:"";
 position:fixed;
 width:200%;
 height:200%;
-background:radial-gradient(circle,#a855f720 1px,transparent 1px);
-background-size:40px 40px;
-animation:bgmove 60s linear infinite;
+background:radial-gradient(circle,#9333ea22 1px,transparent 1px);
+background-size:35px 35px;
+animation:space 70s linear infinite;
 z-index:-1;
 }
 
-@keyframes bgmove{
-0%{transform:translate(0,0);}
-100%{transform:translate(-400px,-400px);}
+@keyframes space{
+0%{transform:translate(0,0)}
+100%{transform:translate(-600px,-600px)}
 }
 
 /* HEADER */
@@ -41,7 +41,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.5);
 }
 
 .logo{
@@ -51,15 +51,8 @@ gap:15px;
 }
 
 .logo img{
-width:70px;
-border-radius:20px;
-animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
+width:60px;
+border-radius:15px;
 }
 
 nav a{
@@ -76,30 +69,39 @@ color:#c084fc;
 /* BANNER */
 
 .banner{
-height:420px;
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
-text-align:center;
+gap:60px;
+padding:100px 10%;
+flex-wrap:wrap;
 }
 
-.banner h1{
-font-size:50px;
-color:#c084fc;
-margin-bottom:10px;
-}
-
-.banner p{
-opacity:0.8;
+.banner-text{
 max-width:500px;
 }
 
-/* BOTÃO INVITE */
+.banner-text h1{
+font-size:50px;
+color:#c084fc;
+}
 
-.invite-btn{
+.banner-text p{
+opacity:0.8;
+}
+
+.tenshi-img{
+width:240px;
+border-radius:20px;
+box-shadow:0 0 30px #9333ea;
+}
+
+/* BOTÃO */
+
+.invite{
 margin-top:25px;
-padding:15px 35px;
+display:inline-block;
+padding:15px 40px;
 background:#9333ea;
 border-radius:15px;
 color:white;
@@ -109,7 +111,7 @@ box-shadow:0 0 20px #9333ea;
 transition:0.3s;
 }
 
-.invite-btn:hover{
+.invite:hover{
 box-shadow:0 0 40px #c084fc;
 }
 
@@ -119,19 +121,11 @@ section{
 padding:80px 10%;
 }
 
-.section-title{
+.title{
 text-align:center;
 color:#c084fc;
 margin-bottom:50px;
 font-size:32px;
-}
-
-/* STATUS */
-
-.status{
-text-align:center;
-font-size:20px;
-margin-top:10px;
 }
 
 /* STATS */
@@ -139,9 +133,8 @@ margin-top:10px;
 .stats{
 display:flex;
 justify-content:center;
-gap:70px;
+gap:80px;
 flex-wrap:wrap;
-margin-top:40px;
 }
 
 .stat{
@@ -166,7 +159,7 @@ background:#1a0826;
 border:2px solid #7e22ce;
 border-radius:15px;
 padding:25px;
-transition:0.4s;
+transition:0.3s;
 }
 
 .card:hover{
@@ -203,11 +196,10 @@ padding:25px;
 footer{
 text-align:center;
 padding:40px;
-background:#14051f;
+background:#12041c;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -220,40 +212,62 @@ background:#14051f;
 </div>
 
 <nav>
-<a href="#sobre">Sobre</a>
+<a href="#recursos">Recursos</a>
 <a href="#comandos">Comandos</a>
-<a href="#changelog">Updates</a>
+<a href="#updates">Updates</a>
 </nav>
 
 </header>
 
 <div class="banner">
 
-<h1>Tenshi Bot 💜</h1>
+<div class="banner-text">
+
+<h1>Tenshi Bot 👼</h1>
 
 <p>
 Um bot feminino para Discord com sistema de XP,
 IA integrada e comandos úteis.
 </p>
 
-<a class="invite-btn" href="https://discord.com/oauth2/authorize?client_id=1480267754379542680&permissions=8&scope=bot">
-Adicionar Tenshi
+<a class="invite" href="https://discord.com/oauth2/authorize?client_id=1480267754379542680&permissions=8&scope=bot">
+Adicionar ao Discord
 </a>
 
-<div class="status">
-🟢 Tenshi está online
+</div>
+
+<img class="tenshi-img" src="https://cdn.discordapp.com/attachments/1471270897120968994/1481076130701250763/file_0000000041a8720ea753781a45bbac61.png?ex=69b1ff22&is=69b0ada2&hm=672a1aecab8d2dddfa1a21e16422f2c2d073e6a7bb4">
+
+</div>
+
+<section id="recursos">
+
+<h2 class="title">Recursos</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Sistema de XP</h3>
+<p>Ganhe XP ao conversar e suba no ranking.</p>
+</div>
+
+<div class="card">
+<h3>IA da Tenshi</h3>
+<p>Pergunte qualquer coisa usando "Tenshi".</p>
+</div>
+
+<div class="card">
+<h3>Embeds Bonitas</h3>
+<p>Todos os comandos possuem embeds roxas.</p>
 </div>
 
 </div>
 
-<section id="sobre">
+</section>
 
-<h2 class="section-title">Sobre</h2>
+<section>
 
-<p style="text-align:center;max-width:600px;margin:auto;">
-Tenshi é um bot feminino criado por Dzzn.
-Ela possui sistema de XP, IA integrada e embeds roxas bonitas.
-</p>
+<h2 class="title">Estatísticas</h2>
 
 <div class="stats">
 
@@ -263,13 +277,13 @@ Ela possui sistema de XP, IA integrada e embeds roxas bonitas.
 </div>
 
 <div class="stat">
-<h2>∞</h2>
-<p>Diversão</p>
+<h2>24/7</h2>
+<p>Online</p>
 </div>
 
 <div class="stat">
-<h2>24/7</h2>
-<p>Online</p>
+<h2>∞</h2>
+<p>Diversão</p>
 </div>
 
 </div>
@@ -278,12 +292,12 @@ Ela possui sistema de XP, IA integrada e embeds roxas bonitas.
 
 <section id="comandos">
 
-<h2 class="section-title">Comandos</h2>
+<h2 class="title">Comandos</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>👤 Usuário</h3>
+<h3>Usuário</h3>
 <div class="embed">
 !userinfo<br>
 !avatar<br>
@@ -292,27 +306,19 @@ Ela possui sistema de XP, IA integrada e embeds roxas bonitas.
 </div>
 
 <div class="card">
-<h3>📊 Servidor</h3>
+<h3>Servidor</h3>
 <div class="embed">
 !serverinfo
 </div>
 </div>
 
 <div class="card">
-<h3>🤖 Bot</h3>
+<h3>Bot</h3>
 <div class="embed">
 !botinfo<br>
 !ping<br>
-!invite<br>
-!credits
-</div>
-</div>
-
-<div class="card">
-<h3>🧠 IA</h3>
-<div class="embed">
-Tenshi, tudo bem?<br>
-Tenshi, conta uma piada
+!credits<br>
+!invite
 </div>
 </div>
 
@@ -320,20 +326,20 @@ Tenshi, conta uma piada
 
 </section>
 
-<section id="changelog">
+<section id="updates">
 
-<h2 class="section-title">Updates</h2>
+<h2 class="title">Updates</h2>
 
 <div class="changelog">
 
-<b>v1.2</b><br>
+<b>v1.3</b><br>
 • Sistema de XP<br>
 • IA melhorada<br>
 • Novo site<br><br>
 
-<b>v1.1</b><br>
-• Comandos básicos<br>
+<b>v1.2</b><br>
 • !userinfo<br>
+• !rank<br>
 
 </div>
 
